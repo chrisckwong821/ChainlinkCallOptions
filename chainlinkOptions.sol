@@ -25,12 +25,12 @@ contract chainlinkOptions {
         uint premium; //Fee in contract token that option writer charges
         uint expiry; //Unix timestamp of expiration time
         uint amount; //Amount of tokens the option contract is for
-        bool exercised; //Has option been exercised
-        bool canceled; //Has option been canceled
         uint id; //Unique ID of option, also array index
         uint latestCost; //Helper to show last updated cost to exercise
         address payable writer; //Issuer of option
         address payable buyer; //Buyer of option
+        bool exercised; //Has option been exercised
+        bool canceled; //Has option been canceled
     }
     option[] public ethOpts;
     option[] public linkOpts;
